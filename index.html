@@ -419,9 +419,10 @@ img {
 
 
 <style id="name-watermark">
-/* Subtle personal name watermark */
+/* Visible but subtle NARENDRA watermark */
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -429,21 +430,28 @@ body::before {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   white-space: nowrap;
-  font-size: clamp(70px, 13vw, 180px);
-  font-weight: 800;
+  font-family: Arial, sans-serif;
+  font-size: clamp(80px, 14vw, 190px);
+  font-weight: 900;
   letter-spacing: 0.12em;
-  opacity: 0.035;
+  opacity: 0.075;
+  color: #888;
   transform: translate(-50%, -50%) rotate(-18deg);
   user-select: none;
 }
 
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   body::before {
-    font-size: clamp(48px, 18vw, 100px);
-    opacity: 0.028;
+    font-size: clamp(52px, 19vw, 110px);
+    opacity: 0.065;
     letter-spacing: 0.08em;
   }
 }
