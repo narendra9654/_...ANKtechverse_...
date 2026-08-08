@@ -215,6 +215,110 @@
       }
     }
   </style>
+
+<style id="mobile-responsive-fix">
+/* Mobile responsiveness improvements */
+html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  header, nav, main, section, footer {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px 4px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  section, .section, .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero, .home, #home {
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  .skills, .projects, .cards, .project-grid, .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card, .project-card, .skill-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  button, .btn, a.button {
+    min-height: 44px;
+  }
+
+  form input, form textarea, form select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  textarea {
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  section, .section, .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero, .home, #home {
+    padding-top: 50px;
+    padding-bottom: 45px;
+  }
+}
+</style>
+
 </head>
 
 <body>
