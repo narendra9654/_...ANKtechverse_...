@@ -418,41 +418,35 @@ img {
 </style>
 
 
-<style id="name-watermark">
-/* Visible but subtle NARENDRA watermark */
-body {
-  position: relative;
-  overflow-x: hidden;
-}
 
-body::before {
-  content: "NARENDRA";
+
+
+<style id="name-watermark-final">
+/* Personal watermark - deliberately above section backgrounds, but non-interactive */
+.name-watermark {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 0;
+  z-index: 5;
   pointer-events: none;
-  white-space: nowrap;
-  font-family: Arial, sans-serif;
-  font-size: clamp(80px, 14vw, 190px);
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  opacity: 0.075;
-  color: #888;
-  transform: translate(-50%, -50%) rotate(-18deg);
   user-select: none;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  font-family: Arial, sans-serif;
+  font-size: clamp(85px, 15vw, 200px);
+  font-weight: 900;
+  letter-spacing: .12em;
+  line-height: 1;
+  color: #38bdf8;
+  opacity: .085;
+  text-shadow: 0 0 24px rgba(56, 189, 248, .18);
 }
 
 @media (max-width: 768px) {
-  body::before {
-    font-size: clamp(52px, 19vw, 110px);
-    opacity: 0.065;
-    letter-spacing: 0.08em;
+  .name-watermark {
+    font-size: clamp(50px, 18vw, 110px);
+    opacity: .075;
+    letter-spacing: .08em;
   }
 }
 </style>
@@ -460,6 +454,9 @@ body > * {
 </head>
 
 <body>
+
+  <div class="name-watermark" aria-hidden="true">NARENDRA</div>
+
 
   <!-- Navbar -->
   <nav>
