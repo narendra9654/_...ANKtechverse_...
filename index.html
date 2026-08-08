@@ -319,6 +319,104 @@ body {
 }
 </style>
 
+
+<style id="portfolio-animations">
+/* Smooth, lightweight portfolio animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulseSoft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+  50% { box-shadow: 0 0 0 7px rgba(0,0,0,0.05); }
+}
+
+body {
+  animation: fadeIn .7s ease both;
+}
+
+header {
+  animation: fadeUp .7s ease both;
+}
+
+.hero, .home, #home {
+  animation: fadeUp .8s ease .1s both;
+}
+
+section {
+  animation: fadeUp .7s ease both;
+  scroll-margin-top: 80px;
+}
+
+nav a {
+  transition: transform .25s ease, opacity .25s ease;
+}
+nav a:hover {
+  transform: translateY(-2px);
+  opacity: .75;
+}
+
+button, .btn, a.button {
+  transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+}
+button:hover, .btn:hover, a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.card, .project-card, .skill-card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover, .project-card:hover, .skill-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+}
+
+img {
+  transition: transform .4s ease;
+}
+.card:hover img, .project-card:hover img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav a:hover,
+  button:hover, .btn:hover, a.button:hover,
+  .card:hover, .project-card:hover, .skill-card:hover {
+    transform: none;
+  }
+
+  .card, .project-card, .skill-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .card:active, .project-card:active, .skill-card:active {
+    transform: scale(.985);
+  }
+
+  button:active, .btn:active, a.button:active {
+    transform: scale(.97);
+  }
+}
+</style>
+
 </head>
 
 <body>
