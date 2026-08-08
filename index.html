@@ -417,6 +417,38 @@ img {
 }
 </style>
 
+
+<style id="name-watermark">
+/* Subtle personal name watermark */
+body {
+  position: relative;
+}
+
+body::before {
+  content: "NARENDRA";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: clamp(70px, 13vw, 180px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: 0.035;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    font-size: clamp(48px, 18vw, 100px);
+    opacity: 0.028;
+    letter-spacing: 0.08em;
+  }
+}
+</style>
+
 </head>
 
 <body>
