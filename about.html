@@ -7,11 +7,6 @@
 <title>Addanki Narendra Kumar | About</title>
 <style>
 
-
-    /* =====================================
-       RESET
-    ===================================== */
-
     * {
       margin: 0;
       padding: 0;
@@ -32,12 +27,6 @@
     a {
       text-decoration: none;
     }
-
-
-    /* =====================================
-       ANK WATERMARK
-       ANK = ADDANKI NARENDRA KUMAR
-    ===================================== */
 
     .ank-watermark {
 
@@ -77,11 +66,6 @@
       white-space: nowrap;
     }
 
-
-    /* =====================================
-       HEADER
-    ===================================== */
-
     .site-header {
 
       position: sticky;
@@ -106,11 +90,6 @@
         1px solid
         rgba(255, 255, 255, 0.06);
     }
-
-
-    /* =====================================
-       NAVBAR
-    ===================================== */
 
     .navbar {
 
@@ -149,11 +128,6 @@
         0 10px 35px
         rgba(0, 0, 0, 0.20);
     }
-
-
-    /* =====================================
-       LOGO
-    ===================================== */
 
     .brand {
 
@@ -284,11 +258,6 @@
         #64748b;
     }
 
-
-    /* =====================================
-       NAVIGATION
-    ===================================== */
-
     .nav-menu {
 
       display:
@@ -386,12 +355,6 @@
       width:
         22px;
     }
-
-
-
-    /* =====================================
-       PREMIUM NAVIGATION
-    ===================================== */
 
     .premium-nav-shell {
       position: relative;
@@ -506,10 +469,6 @@
 
     .nav-menu a.nav-contact::after { display: none; }
 
-    /* =====================================
-       SECTIONS
-    ===================================== */
-
     section {
 
       position:
@@ -585,11 +544,6 @@
         1.7;
     }
 
-
-    /* =====================================
-       HOME
-    ===================================== */
-
     #home {
 
       min-height:
@@ -620,11 +574,6 @@
       margin-bottom:
         30px;
     }
-
-
-    /* =====================================
-       BUTTON
-    ===================================== */
 
     .btn {
 
@@ -675,11 +624,6 @@
         rgba(56, 189, 248, 0.25);
     }
 
-
-    /* =====================================
-       ABOUT
-    ===================================== */
-
     .about-text {
 
       max-width:
@@ -694,11 +638,6 @@
       font-size:
         1.1rem;
     }
-
-
-    /* =====================================
-       SKILLS
-    ===================================== */
 
     .skills {
 
@@ -760,11 +699,6 @@
       font-size:
         1.4rem;
     }
-
-
-    /* =====================================
-       PROJECTS
-    ===================================== */
 
     .projects {
 
@@ -830,11 +764,6 @@
         25px;
     }
 
-
-    /* =====================================
-       CONTACT
-    ===================================== */
-
     #contact {
       text-align:
         center;
@@ -849,11 +778,6 @@
       font-size:
         1.1rem;
     }
-
-
-    /* =====================================
-       FOOTER
-    ===================================== */
 
     footer {
 
@@ -883,11 +807,6 @@
       font-size:
         14px;
     }
-
-
-    /* =====================================
-       ANIMATION
-    ===================================== */
 
     @keyframes fadeIn {
 
@@ -963,11 +882,6 @@
         fadeUp 0.8s ease;
     }
 
-
-    /* =====================================
-       TABLET
-    ===================================== */
-
     @media (max-width: 900px) {
 
       .skills {
@@ -984,11 +898,6 @@
       }
 
     }
-
-
-    /* =====================================
-       MOBILE
-    ===================================== */
 
     @media (max-width: 768px) {
 
@@ -1102,9 +1011,6 @@
           none;
       }
 
-
-      /* Hamburger -> X */
-
       .menu-toggle.active
       span:nth-child(1) {
 
@@ -1165,9 +1071,6 @@
           1fr;
       }
 
-
-      /* Mobile watermark */
-
       .ank-watermark {
 
         font-size:
@@ -1179,11 +1082,6 @@
       }
 
     }
-
-
-    /* =====================================
-       SMALL MOBILE
-    ===================================== */
 
     @media (max-width: 480px) {
 
@@ -1237,9 +1135,6 @@
       }
 
     }
-
-  
-/* MULTI-PAGE PREMIUM NAVIGATION */
 .premium-nav-shell {
   position: relative;
   display: flex;
@@ -1295,10 +1190,6 @@
 
 .page-content { max-width:1100px; margin:auto; min-height:72vh; padding:110px 20px 80px; }
 .page-content > h2 { text-align:center; }
-
-/* =====================================
-   PREMIUM PAGE-TO-PAGE TRANSITIONS
-===================================== */
 
 body {
   opacity: 0;
@@ -1451,11 +1342,6 @@ document.querySelectorAll(".nav-link").forEach(link => {
   });
 });
 
-
-/* =====================================
-   PAGE-TO-PAGE NAVIGATION ANIMATION
-===================================== */
-
 document.querySelectorAll('a[href$=".html"]').forEach(link => {
   link.addEventListener("click", function(event) {
     const target = this.href;
@@ -1488,8 +1374,6 @@ document.querySelectorAll('a[href$=".html"]').forEach(link => {
     }, 380);
   });
 });
-
-/* Smooth browser-back / forward appearance */
 window.addEventListener("pageshow", () => {
   document.body.classList.remove("page-leaving");
 });
